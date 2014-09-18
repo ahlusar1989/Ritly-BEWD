@@ -1,1 +1,8 @@
-Hello world
+<h3><%= link_to "+ Add New Story", new_story_path %></h3>
+
+<% @stories.each do |story| %>
+	<div>
+		<%= link_to story.title, story %><br>
+		Poster: <%= story.user.email %>
+	</div>
+<% end %>

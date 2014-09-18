@@ -1,0 +1,10 @@
+<h3><%= @story.title %></h3>
+<h4>Story Link: <%= link_to @story.link, @story.link %></h4>
+<h4>Category: <%= @story.category %></h4>
+
+<%= form_for [@story, @comment] do |f| %>
+	<p>
+		<%= f.text_area :post, placeholder: "Add a comment..." %>
+	</p>
+	<%= f.submit %>
+<% end %>
