@@ -8,3 +8,9 @@
 	</p>
 	<%= f.submit %>
 <% end %>
+
+<div>
+	<% @story.comments.each do |comment| %>
+	<li><strong><%= comment.user.email %></strong> posted: <%= comment.post %></li>
+	<% end %>
+</div>
